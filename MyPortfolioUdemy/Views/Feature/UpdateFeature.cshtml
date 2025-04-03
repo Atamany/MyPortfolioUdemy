@@ -1,0 +1,37 @@
+﻿@model Feature
+@{
+    ViewData["Title"] = "UpdateFeature";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">@* 
+        <h4 class="page-title">Öne Çıkan</h4> *@
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Öne Çıkan Güncelle</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-sub">
+                            Öne Çıkan ile ilgili güncelle işlemlerini aşağıdaki panelden yapabilirsiniz.
+                        </div>
+                        <form method="post">
+                            <br />
+                            <input type="hidden" asp-for="FeatureID" />
+                            <label>Başlık</label>
+                            <input type="text" asp-for="Title" class="form-control" />
+                            <br />
+                            <label>Açıklama</label>
+                            <textarea rows="4" asp-for="Description" class="form-control"></textarea>
+                            <br />
+                            <button class="btn btn-outline-primary">Güncelle</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,42 @@
+﻿@model Testimonial
+@{
+    ViewData["Title"] = "CreateTestimonial";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">@* 
+        <h4 class="page-title">Referanslar</h4> *@
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Referans Ekle</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-sub">
+                            Referanslar ile ilgili ekleme işlemlerini aşağıdaki panelden yapabilirsiniz.
+                        </div>
+                        <form method="post">
+                            <br />
+                            <label>Referans</label>
+                            <input type="text" asp-for="NameSurname" class="form-control" />
+                            <br />
+                            <label>Başlık</label>
+                            <input type="text" asp-for="Title" class="form-control" />
+                            <br />
+                            <label>Açıklama</label>
+                            <textarea rows="4" asp-for="Description" class="form-control"></textarea>
+                            <br />
+                            <label>Resim (URL)</label>
+                            <input type="text" asp-for="ImageUrl" class="form-control" />
+                            <br />
+                            <button class="btn btn-outline-primary">Ekle</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

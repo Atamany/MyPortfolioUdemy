@@ -9,13 +9,12 @@
         @await Component.InvokeAsync("_LayoutNavbarComponentPartial")
         @await Component.InvokeAsync("_LayoutSidebarComponentPartial")
         <div class="main-panel">
-            <div class="content">
                 <div class="container-fluid">
-                    @RenderBody()
+                @RenderBody()
+                @await Component.InvokeAsync("_LayoutFooterComponentPartial")
                 </div>
             </div>
         </div>
-    </div>
 </body>
 @await Component.InvokeAsync("_LayoutScriptComponentPartial")
 </html>

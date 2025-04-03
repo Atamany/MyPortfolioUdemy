@@ -1,0 +1,42 @@
+﻿@model About
+@{
+    ViewData["Title"] = "UpdateAbout";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">@* 
+        <h4 class="page-title">Hakkında</h4> *@
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Hakkında Güncelle</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-sub">
+                            Hakkında ile ilgili güncelle işlemlerini aşağıdaki panelden yapabilirsiniz.
+                        </div>
+                        <form method="post">
+                            <br />
+                            <input type="hidden" asp-for="AboutId" />
+                            <label>Başlık</label>
+                            <input type="text" asp-for="Title" class="form-control" />
+                            <br />
+                            <label>Alt-Başlık</label>
+                            <input type="text" asp-for="SubDescription" class="form-control" />
+                            <br />
+                            <label>Detaylar</label>
+                            <textarea rows="4" asp-for="Details" class="form-control"></textarea>
+                            <br />
+                            <button class="btn btn-outline-primary">Güncelle</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
