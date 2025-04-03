@@ -1,0 +1,9 @@
+﻿@model List<MyPortfolioUdemy.DAL.Entities.SocialMedia>
+<ul class="home-social">
+    @foreach (var item in Model)
+    {
+        <li>
+            <a href="@item.URL"><img src="@item.Icon" style="width:30px;height:30px;" /><span>@item.Title</span></a>
+        </li>
+    }
+</ul>

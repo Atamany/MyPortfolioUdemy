@@ -1,0 +1,23 @@
+﻿@model List<MyPortfolioUdemy.DAL.Entities.Contact>
+
+<div class="col-four tab-full contact__infos">
+    @foreach (var item in Model)
+    {
+        <h4 class="h06">@item.Description <br /> 
+            @item.Title</h4>
+        <h4 class="h06">Telefon</h4>
+        <p>
+            Telefon: @item.Phone1<br>
+            WhatsApp: @item.Phone2
+        </p>
+        <h4 class="h06">E-Posta</h4>
+        <p>
+            @item.Email1<br>
+            @item.Email2
+        </p>
+        <h4 class="h06">Adres</h4>
+        <p>
+            @item.Address
+        </p>
+    }
+</div>
