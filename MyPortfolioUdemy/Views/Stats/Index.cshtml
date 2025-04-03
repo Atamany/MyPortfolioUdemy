@@ -1,0 +1,144 @@
+﻿@model List<Message>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Ana Sayfa</h4>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card card-stats card-warning">
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center">
+                                    <i class="la la-users"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 d-flex align-items-center">
+                                <div class="numbers">
+                                    <p class="card-category">Referans Sayısı</p>
+                                    <h4 class="card-title">@ViewBag.v1</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-stats card-success">
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center">
+                                    <i class="la la-bar-chart"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 d-flex align-items-center">
+                                <div class="numbers">
+                                    <p class="card-category">Mesaj Sayısı</p>
+                                    <h4 class="card-title">@ViewBag.v2</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-stats card-danger">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center">
+                                    <i class="la la-check-circle"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 d-flex align-items-center">
+                                <div class="numbers">
+                                    <p class="card-category">Okunan Mesaj Sayısı</p>
+                                    <h4 class="card-title">@ViewBag.v4</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card card-stats card-primary">
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="icon-big text-center">
+                                    <i class="la la-newspaper-o"></i>
+                                </div>
+                            </div>
+                            <div class="col-7 d-flex align-items-center">
+                                <div class="numbers">
+                                    <p class="card-category">Okunmamış Mesaj Sayısı</p>
+                                    <h4 class="card-title">@ViewBag.v3</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+    </div>
+    <div class="container-fluid">@* 
+        <h4 class="page-title">Mesajlar</h4> *@
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Gelen Kutusu</div>
+                    </div>
+                    <div class="card-body">@* 
+                        <div class="card-sub">
+                            Mesajlar ile ilgili işlemleri aşağıdaki panelden yapabilirsiniz.
+                        </div> *@
+                        <table class="table mt-3">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Gönderen</th>
+                                    <th scope="col">E-Posta</th>
+                                    <th scope="col">Konu</th>
+                                    <th scope="col">Tarih</th>
+                                    <th scope="col">Durum</th>
+                                    <th scope="col">Mesajı Aç!</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.MessageId</td>
+                                        <td>@item.NameSurname</td>
+                                        <td>@item.Email</td>
+                                        <td>@item.Subject</td>
+                                        <td>@item.SendDate.ToShortDateString()</td>
+                                        <td>
+                                            @if (item.isRead == false)
+                                            {
+                                                <a href="/Stats/isReadToTrue/@item.MessageId" class="btn btn-danger">Okunmadı</a>
+                                            }
+                                            else
+                                        {
+                                                <a href="/Stats/isReadToFalse/@item.MessageId" class="btn btn-success">Okundu</a>
+                                                }
+                                            </td>
+                                            <td><a href="/Stats/OpenMessage/@item.MessageId" class="btn btn-info">Mesajı Aç.</a></td>
+                                        </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

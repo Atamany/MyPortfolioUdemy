@@ -1,0 +1,31 @@
+﻿@model Message
+@{
+    ViewData["Title"] = "OpenMessage";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">@* 
+        <h4 class="page-title">Mesajlar</h4> *@
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">#@ViewBag.ID : @ViewBag.Konu</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-sub">
+                            @ViewBag.Mesaj<br /><br /><br />
+                            Gönderen: <b>@ViewBag.Gonderen</b><br />
+                            E-Posta: <b>@ViewBag.Mail</b><br />
+                            Gönderim Tarihi: <b>@Convert.ToDateTime(ViewBag.Tarih).ToString("dd/MM/yyyy")</b><br />
+                        </div>
+                    </div>
+                    <a href="/Stats/Index" class="btn btn-info">Geri Dön!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
