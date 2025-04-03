@@ -8,7 +8,7 @@
             <div class="info">
                 <a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="true">
                     <span>
-                        Admin
+                        @ViewBag.AccountName
                         <span class="user-level">Admin</span>
                         <span class="caret"></span>
                     </span>
@@ -18,18 +18,18 @@
                 <div class="collapse in" id="collapseExample" aria-expanded="true" style="">
                     <ul class="nav">
                         <li>
-                            <a href="#profile">
-                                <span class="link-collapse">Profil</span>
+                            <a href="/Default/Index/">
+                                <span class="link-collapse">Siteye Git!</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#edit">
+                            <a href="/Account/ChangePassword/">
                                 <span class="link-collapse">Şifre Değiştir</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#settings">
-                                <span class="link-collapse">Ayarlar</span>
+                            <a href="/Login/Logout/">
+                                <span class="link-collapse">Çıkış Yap!</span>
                             </a>
                         </li>
                     </ul>
@@ -83,12 +83,6 @@
                 <a href="/SocialMedia/Index/">
                     <i class="la la-bell"></i>
                     <p>Sosyal Medya</p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="/Login/Logout/">
-                    <i class="la la-power-off"></i>
-                    <p>Çıkış Yap!</p>
                 </a>
             </li>
         </ul>

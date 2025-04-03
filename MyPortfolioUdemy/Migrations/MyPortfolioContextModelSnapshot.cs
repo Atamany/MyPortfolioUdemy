@@ -44,7 +44,28 @@ namespace MyPortfolioUdemy.Migrations
 
                     b.HasKey("AboutId");
 
-                    b.ToTable("Abouts", (string)null);
+                    b.ToTable("Abouts");
+                });
+
+            modelBuilder.Entity("MyPortfolioUdemy.DAL.Entities.Account", b =>
+                {
+                    b.Property<int>("AccountID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AccountID"));
+
+                    b.Property<string>("AccountName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AccountPassword")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AccountID");
+
+                    b.ToTable("Accounts");
                 });
 
             modelBuilder.Entity("MyPortfolioUdemy.DAL.Entities.Contact", b =>
@@ -85,7 +106,7 @@ namespace MyPortfolioUdemy.Migrations
 
                     b.HasKey("ContactId");
 
-                    b.ToTable("Contacts", (string)null);
+                    b.ToTable("Contacts");
                 });
 
             modelBuilder.Entity("MyPortfolioUdemy.DAL.Entities.Experience", b =>
@@ -114,7 +135,7 @@ namespace MyPortfolioUdemy.Migrations
 
                     b.HasKey("ExperienceId");
 
-                    b.ToTable("Experiences", (string)null);
+                    b.ToTable("Experiences");
                 });
 
             modelBuilder.Entity("MyPortfolioUdemy.DAL.Entities.Feature", b =>
@@ -135,7 +156,7 @@ namespace MyPortfolioUdemy.Migrations
 
                     b.HasKey("FeatureID");
 
-                    b.ToTable("Features", (string)null);
+                    b.ToTable("Features");
                 });
 
             modelBuilder.Entity("MyPortfolioUdemy.DAL.Entities.Message", b =>
@@ -170,7 +191,7 @@ namespace MyPortfolioUdemy.Migrations
 
                     b.HasKey("MessageId");
 
-                    b.ToTable("Messages", (string)null);
+                    b.ToTable("Messages");
                 });
 
             modelBuilder.Entity("MyPortfolioUdemy.DAL.Entities.Portfolio", b =>
@@ -203,7 +224,7 @@ namespace MyPortfolioUdemy.Migrations
 
                     b.HasKey("PortfolioId");
 
-                    b.ToTable("Portfolios", (string)null);
+                    b.ToTable("Portfolios");
                 });
 
             modelBuilder.Entity("MyPortfolioUdemy.DAL.Entities.Skill", b =>
@@ -223,7 +244,7 @@ namespace MyPortfolioUdemy.Migrations
 
                     b.HasKey("SkillId");
 
-                    b.ToTable("Skills", (string)null);
+                    b.ToTable("Skills");
                 });
 
             modelBuilder.Entity("MyPortfolioUdemy.DAL.Entities.SocialMedia", b =>
@@ -248,7 +269,7 @@ namespace MyPortfolioUdemy.Migrations
 
                     b.HasKey("SocialMediaId");
 
-                    b.ToTable("SocialMedias", (string)null);
+                    b.ToTable("SocialMedias");
                 });
 
             modelBuilder.Entity("MyPortfolioUdemy.DAL.Entities.Testimonial", b =>
@@ -277,7 +298,7 @@ namespace MyPortfolioUdemy.Migrations
 
                     b.HasKey("TestimonialId");
 
-                    b.ToTable("Testimonials", (string)null);
+                    b.ToTable("Testimonials");
                 });
 #pragma warning restore 612, 618
         }

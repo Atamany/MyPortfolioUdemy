@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MyPortfolioUdemy.DAL.Context;
+using MyPortfolioUdemy.DAL.Entities;
 
 namespace MyPortfolioUdemy.Controllers
 {
@@ -14,6 +15,15 @@ namespace MyPortfolioUdemy.Controllers
             ViewBag.v4 = db.Messages.Count();
 
             return View();
+        }
+        [HttpPost]
+        public IActionResult Index(Message msg)
+        {
+            msg.SendDate = DateTime.Parse(DateTime.Now.ToShortDateString());
+            msg.isRead = false;
+            db.Messages.Add(msg);
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
