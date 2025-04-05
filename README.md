@@ -3,7 +3,7 @@
 <h3>Asp.Net Core ile hazırlanmış, orta seviye Kişisel Pörtfolyo sayfası.</h3><br />
 
 <h2>Projeye Genel Bakış</h2>
-<p>🖱️ Admin Paneli: CRUD işlemlerine sahip olan admin paneli, kullanıcıların kişisel bilgilerini, projelerini, referanslarını, soayl medya hesaplarını kolayca girebilecekleri ve güncelleyebilecekleri bir ortam sağlar. <br>👤 Kullanıcı Arayüzü: Şık ve duyarlı bir tasarım, ziyaretçilere CV'nizi etkileyici bir şekilde sunuyor.</p>
+<p>🖱️ Admin Paneli: CRUD işlemlerine sahip olan admin paneli, kullanıcıların kişisel bilgilerini, projelerini, referanslarını, sosyal medya hesaplarını kolayca girebilecekleri ve güncelleyebilecekleri bir ortam sağlar. <br>👤 Kullanıcı Arayüzü: Şık ve duyarlı bir tasarım, ziyaretçilere CV'nizi etkileyici bir şekilde sunuyor.</p>
 
 
 <h2>Kullanılan Teknolojiler ve Uygulamalar</h2>
