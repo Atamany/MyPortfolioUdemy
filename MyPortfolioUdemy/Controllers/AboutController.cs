@@ -9,30 +9,6 @@ namespace MyPortfolioUdemy.Controllers
     public class AboutController : Controller
     {
         MyPortfolioContext db = new MyPortfolioContext();
-        public IActionResult Index()
-        {
-            var degerler = db.Abouts.ToList();
-            return View(degerler);
-        }
-        [HttpGet]
-        public IActionResult CreateAbout()
-        {
-            return View();
-        }
-        [HttpPost]
-        public IActionResult CreateAbout(About ab)
-        {
-            db.Abouts.Add(ab);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-        public IActionResult DeleteAbout(int id)
-        {
-            var deger = db.Abouts.Find(id);
-            db.Abouts.Remove(deger);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
         [HttpGet]
         public IActionResult UpdateAbout(int id)
         {
@@ -47,7 +23,7 @@ namespace MyPortfolioUdemy.Controllers
             deger.SubDescription = ab.SubDescription;
             deger.Details = ab.Details;
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Stats");
         }
     }
 }

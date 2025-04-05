@@ -27,7 +27,7 @@ namespace MyPortfolioUdemy.Controllers
                 {
                     account.AccountPassword = NewPassword;
                     db.SaveChanges();
-                    return RedirectToAction("Index", "Login");
+                    return RedirectToAction("Logout", "Login");
                 }
                 else
                 {

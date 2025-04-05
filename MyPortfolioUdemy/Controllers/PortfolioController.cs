@@ -47,7 +47,6 @@ namespace MyPortfolioUdemy.Controllers
             deger.SubTitle = po.SubTitle;
             deger.ImageUrl = po.ImageUrl;
             deger.Url = po.Url;
-            deger.Description = po.Description;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
