@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MyPortfolioUdemy.DAL.Context;
 
 namespace MyPortfolioUdemy.Controllers
 {
+    [Authorize]
     public class StatsController : Controller
     {
         MyPortfolioContext db = new MyPortfolioContext();

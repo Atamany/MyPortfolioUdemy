@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MyPortfolioUdemy.DAL.Context;
 using MyPortfolioUdemy.DAL.Entities;
 
 namespace MyPortfolioUdemy.Controllers
 {
+    [Authorize]
     public class ExperienceController : Controller
     {
         MyPortfolioContext db = new MyPortfolioContext();
