@@ -16,10 +16,16 @@ namespace MyPortfolioUdemy.ViewComponents.LayoutViewComponents
                     .Where(x => x.AccountID == accountId)
                     .Select(x => x.AccountName)
                     .FirstOrDefault();
+                var AccountImage = db.Accounts
+                    .Where(x => x.AccountID == accountId)
+                    .Select(x => x.AccountImageUrl)
+                    .FirstOrDefault();
                 ViewBag.AccountName = AccountName;
+                ViewBag.AccountImage = AccountImage;
             }
             else
             {
+                ViewBag.AccountImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrBQBC8A_xwJz4xJPVizRRea9xZLrjF2zB2Q&s";
                 ViewBag.AccountName = "Misafir";
             }
             return View();

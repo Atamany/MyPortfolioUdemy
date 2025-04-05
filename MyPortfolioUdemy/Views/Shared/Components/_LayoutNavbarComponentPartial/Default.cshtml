@@ -38,11 +38,11 @@
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrBQBC8A_xwJz4xJPVizRRea9xZLrjF2zB2Q&s" alt="user-img" width="36" class="img-circle"><span>@ViewBag.UserName</span></span> </a>
+                    <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false"> <img src="@ViewBag.AccountImage" alt="user-img" width="36" class="img-circle"><span>@ViewBag.UserName</span></span> </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li>
                             <div class="user-box">
-                                <div class="u-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrBQBC8A_xwJz4xJPVizRRea9xZLrjF2zB2Q&s" alt="user"></div>
+                                <div class="u-img"><img src="@ViewBag.AccountImage" alt="user"></div>
                                 <div class="u-text">
                                     <h4>@ViewBag.AccountName</h4>
                                     <a href="/Account/ChangePassword/" class="btn btn-rounded btn-danger btn-sm">Şifre Değiştir!</a>
